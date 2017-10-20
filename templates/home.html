@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+	{% set messages = get_flashed_messages() %}
+    {% for message in messages %}
+{{message}}
+{% endfor %}
+    <form method="POST" action="/verify">
+      Username: <input type="text" name="myUser" required><br>
+      Password: <input type="password" name="myPass" required><br>
+      <br>
+      <input type="submit" value="Login">
+    </form>
+  </body>
+
+</html>
